@@ -1,0 +1,118 @@
+html {
+  scroll-behavior: smooth;
+}
+
+#loader.hidden-loader {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+body.loading {
+  overflow: hidden;
+}
+
+.group,
+button,
+a {
+  transition: all 0.3s ease;
+}
+
+img {
+  transition: transform 0.5s ease;
+}
+
+#projects-container .group {
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+/* ── Light Mode ── */
+body.light {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+body.light p,
+body.light ul,
+body.light h1,
+body.light h2,
+body.light h3,
+body.light h4,
+body.light #menu-btn,
+body.light #message,
+body.light footer {
+  color: #0f172a;
+}
+
+body.light .text-slate-400,
+body.light #sleek {
+  color: #475569;
+}
+
+body.light header {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: #e2e8f0;
+}
+
+body.light .card,
+body.light .project-card,
+body.light .skill-card {
+  background: #ffffff;
+  border-color: #d80;
+}
+
+body.light .bg-slate-800,
+body.light .bg-slate-900 {
+  background: #ffffff;
+}
+
+body.light .bg-slate-900\/50 {
+  background: #f1f5f9;
+}
+
+body.light .border-slate-700,
+body.light .border-slate-800 {
+  border-color: #e2e8f0;
+}
+
+body.light .group:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border-color: #f59e0b;
+}
+
+/* Light mode scrollbar */
+body.light::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+body.light::-webkit-scrollbar-thumb {
+  background: #f59e0b;
+}
+
+/* ── Project Cards ── */
+.project-card {
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f59e0b;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d97706;
+}

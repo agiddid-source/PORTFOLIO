@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PR0P3LL3R | Frontend Developer</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="PR0P3LL3R — Frontend Developer specializing in JavaScript, Tailwind CSS, and modern web experiences. Available for freelance & remote work.">
+  <meta name="keywords" content="frontend developer, JavaScript, Tailwind CSS, web developer, Nigeria, portfolio">
+  <meta name="author" content="PR0P3LL3R">
+
+  <!-- Open Graph (social sharing) -->
+  <meta property="og:title" content="PR0P3LL3R | Frontend Developer">
+  <meta property="og:description" content="Building modern, responsive web experiences with JavaScript and Tailwind CSS.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://agiddid-source.github.io">
+  <meta property="og:image" content="Assets/Images/Profile Pic.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PR0P3LL3R | Frontend Developer">
+  <meta name="twitter:description" content="Building modern, responsive web experiences.">
+  <meta name="twitter:image" content="Assets/Images/Profile Pic.png">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <!-- Trimmed to single font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-950 text-white overflow-x-hidden font-[Manrope,sans-serif]">
+
+  <!-- LOADER -->
+  <div
+    id="loader"
+    class="fixed inset-0 z-[9999] bg-slate-950 flex flex-col items-center justify-center transition-all duration-700 overflow-hidden px-6"
+  >
+    <h1
+      class="text-3xl sm:text-4xl md:text-6xl font-bold text-amber-500 tracking-[4px] sm:tracking-[8px] md:tracking-[10px] mb-8 animate-pulse text-center px-4"
+    >
+      PR0P3LL3R
+    </h1>
+    <div class="w-64 h-1 bg-slate-800 rounded-full overflow-hidden">
+      <div
+        id="loader-bar"
+        class="h-full bg-amber-500 rounded-full w-0 transition-all duration-300"
+      ></div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="sticky top-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between px-8 py-6">
+      <h1 class="text-2xl font-bold text-amber-500">
+        .PR0P3LL3R.
+      </h1>
+      <ul class="hidden md:flex items-center gap-10 text-sm font-medium">
+        <li><a href="#home" class="hover:text-amber-400 transition">Home</a></li>
+        <li><a href="#about" class="hover:text-amber-400 transition">About</a></li>
+        <li><a href="#skills" class="hover:text-amber-400 transition">Skills</a></li>
+        <li><a href="#projects" class="hover:text-amber-400 transition">Projects</a></li>
+        <li><a href="#contact" class="hover:text-amber-400 transition">Contact</a></li>
+      </ul>
+
+      <div class="flex items-center gap-4">
+        <button id="theme-toggle"
+                class="w-11 h-11 flex items-center justify-center rounded-xl border border-slate-700 hover:border-amber-500 hover:text-amber-400 transition duration-300"
+                aria-label="Toggle theme">
+          <i id="theme-icon" class="fa-solid fa-moon"></i>
+        </button>
+        <button id="menu-btn" class="md:hidden text-3xl text-white" aria-label="Open menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+         class="md:hidden max-h-0 overflow-hidden opacity-0 transition-all duration-500 ease-in-out bg-slate-950 border-t border-slate-800 px-6">
+      <div class="py-6 space-y-6">
+        <a href="#home" class="block hover:text-amber-400 mobile-link">Home</a>
+        <a href="#about" class="block hover:text-amber-400 mobile-link">About</a>
+        <a href="#skills" class="block hover:text-amber-400 mobile-link">Skills</a>
+        <a href="#projects" class="block hover:text-amber-400 mobile-link">Projects</a>
+        <a href="#contact" class="block hover:text-amber-400 mobile-link">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HOME -->
+  <section id="home" class="relative overflow-hidden min-h-screen flex items-center px-4 sm:px-6 pt-24 sm:pt-32">
+    <div class="absolute top-40 left-20 w-72 h-72 bg-amber-500 rounded-full blur-[120px] opacity-10"></div>
+    <div class="absolute bottom-20 right-20 w-72 h-72 bg-orange-500 rounded-full blur-[120px] opacity-10"></div>
+
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 md:gap-16 items-center w-full">
+      <div>
+        <p class="text-amber-400 mb-4 font-medium">
+          <span id="typing"></span>
+        </p>
+        <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+          Building Modern <br>
+          <span class="text-amber-500 whitespace-nowrap">Web Experiences</span>
+        </h1>
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed mb-8 max-w-xl">
+          I create responsive and interactive websites using modern frontend technologies like JavaScript and Tailwind CSS.
+        </p>
+        <div class="flex flex-wrap gap-3 sm:gap-4">
+          <a href="#projects"
+            class="bg-amber-500 hover:bg-amber-600 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold transition duration-300 hover:-translate-y-1 text-sm sm:text-base text-black">
+            View Projects
+          </a>
+          <a href="#contact"
+            class="border border-slate-700 hover:border-amber-500 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold transition duration-300 hover:-translate-y-1 text-sm sm:text-base">
+            Contact Me
+          </a>
+        </div>
+      </div>
+
+      <div class="flex justify-center mt-8 md:mt-0">
+        <div class="w-[320px] h-[260px] md:w-96 md:h-96 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 blur-3xl opacity-20 absolute"></div>
+        <img src="Assets/Images/Profile Pic.png"
+          alt="PR0P3LL3R — Frontend Developer Profile Photo"
+          class="relative w-56 sm:w-64 md:w-96 object-cover rounded-3xl border border-slate-800 shadow-[0_0_40px_rgba(255,170,0,0.12)]">
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-28 px-6">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-4xl font-bold mb-12 text-center">About Me</h2>
+
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <img src="Assets/Images/About Me.png"
+               alt="PR0P3LL3R working on a project"
+               class="rounded-3xl border border-slate-800">
+        </div>
+
+        <div>
+          <h2 class="text-3xl font-bold text-sky-300 mb-4">
+            Who I Am <span class="text-amber-500"><span id="sleek" class="text-white">&</span> What I Do</span>
+          </h2>
+          <p class="text-slate-300 text-lg leading-relaxed mb-4">
+            I'm a frontend developer passionate about building clean, responsive,
+            and user-friendly websites that leave a lasting impression.
+          </p>
+          <p class="text-slate-300 text-lg leading-relaxed mb-6">
+            I enjoy working with Tailwind CSS, JavaScript, APIs, and interactive UI
+            designs — turning ideas into polished digital experiences that are both
+            functional and visually engaging.
+          </p>
+
+          <div class="grid grid-cols-3 gap-4 mb-8">
+            <div class="bg-slate-900 rounded-xl p-4 text-center border border-slate-700 hover:border-amber-500 transition duration-300 hover:-translate-y-2">
+              <p class="text-amber-500 text-2xl font-bold">2+</p>
+              <p class="text-slate-400 text-sm">Years Experience</p>
+            </div>
+            <div class="bg-slate-900 rounded-xl p-4 text-center border border-slate-700 hover:border-amber-500 transition duration-300 hover:-translate-y-2">
+              <p class="text-amber-500 text-2xl font-bold">15+</p>
+              <p class="text-slate-400 text-sm">Projects Built</p>
+            </div>
+            <div class="bg-slate-900 rounded-xl p-4 text-center border border-slate-700 hover:border-amber-500 transition duration-300 hover:-translate-y-2">
+              <p class="text-amber-500 text-2xl font-bold">On Time</p>
+              <p class="text-slate-400 text-sm">Every Delivery</p>
+            </div>
+          </div>
+
+          <ul class="space-y-2 mb-8 text-slate-300">
+            <li class="flex items-center gap-2"><span class="text-amber-500">▹</span> Based in Warri, Nigeria</li>
+            <li class="flex items-center gap-2"><span class="text-amber-500">▹</span> Open to freelance & remote opportunities</li>
+            <li class="flex items-center gap-2"><span class="text-amber-500">▹</span> Currently deepening my React & Next.js skills</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="py-28 px-6 bg-slate-900/40 relative overflow-hidden">
+    <div class="absolute top-20 left-20 w-72 h-72 bg-amber-500/10 blur-[120px] rounded-full"></div>
+    <div class="absolute bottom-10 right-10 w-72 h-72 bg-cyan-500/10 blur-[120px] rounded-full"></div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+      <h2 class="text-4xl font-bold mb-16 text-center">Skills</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <!-- HTML -->
+        <div class="group bg-white/5 backdrop-blur-xl border border-white/10 hover:border-amber-500/40 rounded-3xl p-7 transition duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-amber-500/10">
+          <div class="text-3xl mb-5 w-16 h-16 flex items-center justify-center rounded-2xl transition duration-500 group-hover:scale-110"
+               style="background-color: #E44D26;">
+            <i class="fa-brands fa-html5 text-white"></i>
+          </div>
+          <h3 class="text-white font-bold text-2xl mb-3">HTML5</h3>
+          <p class="text-slate-400 leading-relaxed mb-5">
+            Semantic and accessible markup for structured, SEO-friendly web pages.
+          </p>
+          <div class="w-full bg-slate-700/60 rounded-full h-2 overflow-hidden">
+            <div class="bg-amber-500 h-2 rounded-full transition-all duration-1000 group-hover:w-[97%]" style="width: 97%"></div>
+          </div>
+          <p class="text-amber-400 text-sm mt-2 font-medium">97% Proficiency</p>
+        </div>
+
+        <!-- CSS -->
+        <div class="group bg-white/5 backdrop-blur-xl border border-white/10 hover:border-amber-500/40 rounded-3xl p-7 transition duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-cyan-500/10">
+          <div class="text-3xl mb-5 w-16 h-16 flex items-center justify-center rounded-2xl transition duration-500 group-hover:scale-110"
+               style="background-color: #1572B6;">
+            <i class="fa-brands fa-css3-alt text-white"></i>
+          </div>
+          <h3 class="text-white font-bold text-2xl mb-3">CSS3</h3>
+          <p class="text-slate-400 leading-relaxed mb-5">
+            Modern responsive styling with animations and layout systems.
+          </p>
+          <div class="w-full bg-slate-700/60 rounded-full h-2 overflow-hidden">
+            <div class="bg-amber-500 h-2 rounded-full" style="width: 94%"></div>
+          </div>
+          <p class="text-amber-400 text-sm mt-2 font-medium">94% Proficiency</p>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="group bg-white/5 backdrop-blur-xl border border-white/10 hover:border-amber-500/40 rounded-3xl p-7 transition duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-yellow-500/10">
+          <div class="text-3xl mb-5 w-16 h-16 flex items-center justify-center rounded-2xl transition duration-500 group-hover:scale-110"
+               style="background-color: #F7DF1E;">
+            <i class="fa-brands fa-js text-black"></i>
+          </div>
+          <h3 class="text-white font-bold text-2xl mb-3">JavaScript</h3>
+          <p class="text-slate-400 leading-relaxed mb-5">
+            Interactive frontend logic, DOM manipulation and API integration.
+          </p>
+          <div class="w-full bg-slate-700/60 rounded-full h-2 overflow-hidden">
+            <div class="bg-amber-500 h-2 rounded-full" style="width: 88%"></div>
+          </div>
+          <p class="text-amber-400 text-sm mt-2 font-medium">88% Proficiency</p>
+        </div>
+
+        <!-- Tailwind -->
+        <div class="group bg-white/5 backdrop-blur-xl border border-white/10 hover:border-amber-500/40 rounded-3xl p-7 transition duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-sky-500/10">
+          <div class="text-3xl mb-5 w-16 h-16 flex items-center justify-center rounded-2xl transition duration-500 group-hover:scale-110 bg-slate-900">
+            <svg class="w-12 h-12" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 6C11.6 6 8.8 8.2 8 12.6c1.2-1.6 2.6-2.2 4.2-1.8.9.23 1.55.9 2.26 1.63C15.68 13.67 17.2 15.2 20.4 15.2c4.4 0 7.2-2.2 8-6.6-1.2 1.6-2.6 2.2-4.2 1.8-.9-.23-1.55-.9-2.26-1.63C20.72 7.53 19.2 6 16 6zM11.6 15.2C7.2 15.2 4.4 17.4 3.6 21.8c1.2-1.6 2.6-2.2 4.2-1.8.9.23 1.55.9 2.26 1.63C11.28 22.87 12.8 24.4 16 24.4c4.4 0 7.2-2.2 8-6.6-1.2 1.6-2.6 2.2-4.2 1.8-.9-.23-1.55-.9-2.26-1.63C16.32 16.73 14.8 15.2 11.6 15.2z"
+                    fill="#38BDF8"/>
+            </svg>
+          </div>
+          <h3 class="text-white font-bold text-2xl mb-3">Tailwind CSS</h3>
+          <p class="text-slate-400 leading-relaxed mb-5">
+            Fast utility-first styling for clean, consistent UI components.
+          </p>
+          <div class="w-full bg-slate-700/60 rounded-full h-2 overflow-hidden">
+            <div class="bg-amber-500 h-2 rounded-full" style="width: 91%"></div>
+          </div>
+          <p class="text-amber-400 text-sm mt-2 font-medium">91% Proficiency</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="py-28 px-6">
+    <div class="max-w-7xl mx-auto">
+
+      <h2 class="text-4xl font-bold mb-8 text-center">Projects</h2>
+
+      <!-- Filter Buttons -->
+      <div class="flex flex-wrap justify-center gap-4 mb-16">
+        <button class="filter-btn active-filter px-6 py-3 rounded-xl bg-amber-500 text-black font-medium transition duration-300" data-filter="all">
+          All
+        </button>
+        <button class="filter-btn px-6 py-3 rounded-xl border border-slate-700 hover:border-amber-500 hover:text-amber-400 transition duration-300" data-filter="html">
+          HTML
+        </button>
+        <button class="filter-btn px-6 py-3 rounded-xl border border-slate-700 hover:border-amber-500 hover:text-amber-400 transition duration-300" data-filter="javascript">
+          JavaScript
+        </button>
+        <button class="filter-btn px-6 py-3 rounded-xl border border-slate-700 hover:border-amber-500 hover:text-amber-400 transition duration-300" data-filter="css">
+          CSS
+        </button>
+        <button class="filter-btn px-6 py-3 rounded-xl border border-slate-700 hover:border-amber-500 hover:text-amber-400 transition duration-300" data-filter="other">
+          Other
+        </button>
+      </div>
+
+      <!-- Projects Grid (populated by GitHub API) -->
+      <div id="projects-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-28 px-6 bg-slate-900/50">
+    <div class="max-w-3xl mx-auto text-center text-slate-300">
+      <h2 class="text-4xl font-bold mb-6">Contact Me</h2>
+      <p class="text-slate-300 mb-12">Let's work together on your next project.</p>
+
+      <form id="contact-form" class="space-y-6 text-left">
+        <input type="text"
+               name="from_name"
+               placeholder="Your Name"
+               required
+               class="w-full bg-slate-900 border border-slate-800 rounded-xl px-5 py-4 outline-none focus:border-amber-500 transition duration-300">
+        <input type="email"
+               name="from_email"
+               placeholder="Your Email"
+               required
+               class="w-full bg-slate-900 border border-slate-800 rounded-xl px-5 py-4 outline-none focus:border-amber-500 transition duration-300">
+        <textarea rows="6"
+                  name="message"
+                  placeholder="Your Message"
+                  required id="message"
+                  class="w-full bg-slate-900 border border-slate-800 rounded-xl px-5 py-4 outline-none focus:border-amber-500 transition duration-300"></textarea>
+        <div class="text-center">
+          <button type="submit" class="bg-amber-500 hover:bg-amber-600 px-8 py-4 rounded-xl text-black font-semibold transition duration-300 hover:-translate-y-1">
+            Send Message
+          </button>
+        </div>
+        <p id="form-message" class="text-sm mt-4 text-center"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800 py-10 text-center text-slate-400">
+    <div class="flex justify-center gap-6 mb-4 text-xl">
+      <a href="https://github.com/agiddid-source" target="_blank"
+         class="hover:text-amber-400 transition duration-300" aria-label="GitHub">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://linkedin.com/in/diepreye-agiddi-3287883b2" target="_blank"
+         class="hover:text-amber-400 transition duration-300" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a href="https://twitter.com/Frontenddevguru" target="_blank"
+         class="hover:text-amber-400 transition duration-300" aria-label="Twitter / X">
+        <i class="fa-brands fa-x-twitter"></i>
+      </a>
+    </div>
+    <p class="text-sm">&copy; 2026 PR0P3LL3R. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
