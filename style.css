@@ -47,6 +47,10 @@ body.light footer {
   color: #0f172a;
 }
 
+body.light #arrow {
+  color: #1572B6;
+}
+
 body.light .text-slate-400,
 body.light #sleek {
   color: #475569;
