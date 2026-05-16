@@ -42,9 +42,18 @@ body.light h2,
 body.light h3,
 body.light h4,
 body.light #menu-btn,
+body.light #mobile-menu a,
 body.light #message,
 body.light footer {
   color: #0f172a;
+}
+
+body.light #mobile-menu {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+body.light #mobile-menu a:hover {
+  color: #f59e0b;
 }
 
 body.light #arrow {
